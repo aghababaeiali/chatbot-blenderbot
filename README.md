@@ -31,13 +31,23 @@ human‑like responses.
 
 ## Project Structure
 
-    LLM_application_chatbot/
+    chatbot-blenderbot/
     │
-    ├── app.py                # Main Python application
-    ├── static/
-    │   └── script.js         # Frontend interaction logic
-    ├── templates/            # HTML templates (if included)
-    └── README.md             # Project documentation
+    ├── app.py                # Main Flask application
+    ├── requirements.txt      # Python dependencies
+    ├── Dockerfile            # Container configuration
+    ├── README.md             # Project documentation
+    │
+    ├── templates/
+    │   └── index.html        # Main chatbot interface
+    │
+    └── static/
+        ├── css/              # Stylesheets
+        ├── script.js         # Frontend logic
+        ├── Bot_logo.png
+        ├── user.jpeg
+        ├── Error.png
+        └── favicon.ico
 
 ------------------------------------------------------------------------
 
