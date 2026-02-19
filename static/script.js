@@ -42,7 +42,7 @@ const sendMessage = async (message) => {
   messagesContainer.appendChild(loadingtextElement);
 
   async function makePostRequest(msg) {
-    const url = 'www.example.com';  // Make a POST request to this url
+    const url = '/chatbot';  // Make a POST request to this url
     const requestBody = {
       prompt: msg
     };
@@ -101,5 +101,13 @@ messageForm.addEventListener('submit', async (event) => {
   if (message !== '') {
     messageInput.value = '';
     await sendMessage(message);
+  }
+});
+
+// Send message when pressing Enter
+messageInput.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    event.preventDefault();   // Prevent new line
+    messageForm.requestSubmit(); // Trigger form submit
   }
 });
